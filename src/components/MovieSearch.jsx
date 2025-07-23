@@ -28,7 +28,7 @@ const MovieSearch = ({watchlist,setWatchlist}) => {
     console.log(`Searching for movies: ${query}`, import.meta.env.VITE_OMDB_API_KEY);
     try {
       const response = await axios.get(
-        `http://www.omdbapi.com/?s=${query}&apikey=${import.meta.env.VITE_OMDB_API_KEY}`
+        `https://www.omdbapi.com/?s=${query}&apikey=${import.meta.env.VITE_OMDB_API_KEY}`
       );
       
       if (response.data.Response === 'True') {

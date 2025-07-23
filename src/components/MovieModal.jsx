@@ -10,7 +10,7 @@ const MovieModal = ({ movie, onClose }) => {
       try {
         setLoading(true);
         const response = await axios.get(
-          `http://www.omdbapi.com/?i=${movie.imdbID}&apikey=${import.meta.env.VITE_OMDB_API_KEY}`
+          `https://www.omdbapi.com/?i=${movie.imdbID}&apikey=${import.meta.env.VITE_OMDB_API_KEY}`
         );
         setMovieDetails(response.data);
       } catch (error) {
